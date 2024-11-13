@@ -1,0 +1,1616 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+
+}
+body{
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  /* background-image: linear-gradient(to bottom left,rgb(38 53 72),rgb(38 53 72),rgb(38 53 72),rgb(207 109 38),rgb(207 109 38)); */
+}
+.white-separator {
+  width: 40%; /* Full width */
+  height: 1px; /* Separator thickness */
+  background-color: #fff; /* White color */
+  margin: 0 auto; /* Center the separator */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+nav {
+  background-color: white; 
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+/* padding-bottom: 10px; */
+
+  /* New properties for fixed navigation */
+  position: fixed;
+  top: 0;
+  width: calc(100% - 20px);
+  z-index: 10;
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  /* font-size: 1 rem; */
+  height: 50px;
+  margin-left: 1px;
+  /* margin-right: 10px; */
+  padding-right: 10px;
+}
+nav a{  
+
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(38 53 72);
+  margin-top: 10px;
+  font-size: 1.2rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+nav a:hover{
+  color: black;
+  background-color:rgb(206, 96, 6);
+  box-shadow: 0 0 100px rgb(206, 96, 6);
+   border-radius: 40px;
+ 
+}
+nav li:first-child{
+  margin-right: auto;
+}
+/* sample glow */
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+
+/* welcome pop */
+#home {
+  background: url(11.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 50px; /* Adds space for wave */
+  overflow: hidden; /* Keeps SVG contained within the section */
+}
+
+/* Adding the wavy curve at the bottom */
+#home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust height to control wave size */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,112C960,85,1056,75,1152,106.7C1248,139,1344,213,1392,245.3L1440,277L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-left: 150px;
+  padding-right: 20px;
+  padding-bottom: 20px;   
+  padding-top: 50px;   
+}
+
+/* * container * */
+
+.headingswords {
+  margin-top: 300px; 
+  position: relative;
+  right: 20px;
+  bottom: 150px;
+}
+
+.headingswords h2 {
+  color: rgb(228, 100, 8);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.headingswords h1 {
+  color: white;
+  font-size: 3.5rem;
+margin-bottom: 20PX;
+} 
+
+/* ====== Button for top */
+.call {
+  background-color: rgb(206, 96, 6);
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded shape */
+  padding: 20px 90px; /* Large size */
+  font-size: 1.5rem; /* Bigger text */
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.call:hover {
+  background-color: rgb(31, 30, 107); /* Darker blue on hover */
+}
+
+/* WhatsApp button */
+.WhatsApp {
+  background-color: rgb(206, 96, 6);
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded shape */
+  padding: 20px 90px; /* Large size */
+  font-size: 1.5rem; /* Bigger text */
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.WhatsApp:hover {
+  background-color: rgb(31, 30, 107); /* Darker blue on hover */
+}/* Slider styles */
+.slider {
+  position: relative;
+  width: 100%; /* Make the slider responsive */
+  max-width: 800px; /* Set a maximum width */
+  height: 600px; /* Fixed height */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 100px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%; /* Ensure the slide width is 100% */
+  height: 100%; /* Set the slide height to 100% */
+  object-fit: cover; /* Cover the area while preserving aspect ratio */
+}
+
+/* Specific styles for the first image to fill the slider */
+.first-slide {
+  position: absolute; /* Position it absolutely within the slider */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area to fill the slider */
+  z-index: 0; /* Ensure it's behind other slides */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; /* Ensure buttons are on top */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, 
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+  /* Mobile styles */
+
+
+/* Styles for very small mobile screens *
+
+/* Form styling inside the modal */
+#callRequestForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#callRequestForm label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#callRequestForm input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px; /* Rounded input fields */
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+#callRequestForm input:focus {
+  border-color: rgb(206, 96, 6); /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.reqsub {
+  background-color: rgb(206, 96, 6);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform transition */
+}
+
+.reqsub:hover {
+  background-color: rgb(106, 49, 180);
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.reqsub:active {
+  transform: translateY(0); /* Reset on click */
+}
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 20px; /* Rounded corners for modal */
+  padding: 40px;
+  width: 400px;
+  max-width: 100%;
+  margin: 10% auto; /* Center the modal */
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button in the modal */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: -100px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container-1 div {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-50px); /* Move up out of view */
+  transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition */
+  width: 280px; /* Set uniform width for all blocks */
+  height: 180px; /* Set uniform height for all blocks */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add animation effect for divs when in view */
+.a.show, .b.show, .c.show {
+  opacity: 1;
+  transform: translateY(0); /* Reset position */
+}
+
+.container-1 .a {
+  color: rgb(38, 53, 72);
+  background-color: rgb(206, 96, 6);
+  padding: 20px;
+  animation: fadeInUp 1s ease-in-out;
+  border-radius: 20px;
+}
+
+.container-1 .b {
+  background-color: rgb(38, 53, 72);
+  color: rgb(255, 245, 245);
+  padding: 20px;
+  animation: fadeInUp 2s ease-in-out;
+  border-radius: 20px;
+  
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: baseline; /* Distribute space evenly */
+  
+    text-align: center; /* Center align text */
+  
+  
+}
+
+.container-1 .c {
+  background-color: rgb(206, 96, 6);
+  color: rgb(38, 53, 72);
+  padding: 20px;
+  animation: fadeInUp 3s ease-in-out;
+  border-radius: 20px;
+  
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: baseline; /* Distribute space evenly */
+
+  text-align: center; /* Center align text */
+
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* Responsive design for iPhone XR and similar devices */
+@media (max-width: 414px) {
+    .container-1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .container-1 div {
+        width: 100%; /* Full width for mobile */
+        height: 180px; /* Keep the same height for all boxes */
+        padding: 15px;
+        box-sizing: border-box; /* Ensure padding is included in width/height */
+    }
+
+    /* Ensure the h3 size is consistent */
+    .container-1 h2 {
+        font-size: 30px; /* Set h3 to 30px as per your requirement */
+        margin: 0; /* Remove default margin */
+    }
+
+    .container-1 h3 {
+        font-size: 1rem; /* Keep h5 font size relative */
+        margin: 0; /* Remove default margin */
+    }
+}
+
+
+#ABOUTUS {
+  padding: 20px;
+} 
+
+.container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+  background-color: #f8f8f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Mobile responsiveness */
+
+/* Base styles for desktop */
+
+
+.content-2 {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content-2 h1 {
+  margin-bottom: 20px;
+  /* text-decoration: underline; */
+  font-size: 2.5rem;
+   /* Font size for the title */
+  margin-bottom: 50px;      /*Margin below the title */
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+.content-2 p {
+  font-size: 2rem;
+  line-height: 1.5;
+  max-width: 700px;
+  color: #555;
+}
+.image-2 {
+  overflow: hidden; /* Prevents any overflow outside the container */
+}
+
+.image-2 img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative; /* Necessary for left positioning */
+  animation: slideLeftToRight 3s ease-in-out forwards; /* "forwards" keeps the end position */
+}
+.image-2:hover img {
+  animation: slideIn 3s forwards; /* Animation with forwards to keep final state */
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-100%); /* Start from the left */
+  }
+  100% {
+    transform: translateX(0); /* End at the center */
+  }
+}
+
+
+
+.orange-separator {
+  background-color: orange;
+  height: 5px;
+  width: 50%;
+  margin-left: 460px;
+  margin-top: 20px;
+}
+
+
+.Quick{
+  margin-bottom: 2px;
+}
+
+/* Container styling for the Our Services section */
+#OURSERVICES {
+  padding: 20px;
+} 
+
+.container-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+  background-color: #f8f8f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Mobile responsiveness */
+
+/* Base styles for desktop */
+
+
+.content-3 {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content-3 h1 {
+  margin-bottom: 20px;
+  /* text-decoration: underline; */
+  font-size: 2.5rem;
+   /* Font size for the title */
+  margin-bottom: 50px;      /*Margin below the title */
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+.content-3 p {
+  font-size: 2rem;
+  line-height: 1.5;
+  max-width: 700px;
+  color: #555;
+}
+
+.image-3 img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+
+}.image-3 {
+  overflow: hidden; /* Prevents any overflow outside the container */
+}
+
+.image-3 img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  transform: translateX(100%); /* Start off-screen to the right */
+  animation: slideRightToLeft 3s ease-in-out forwards; /* "forwards" keeps the end position */
+}
+
+/* Define animation for sliding from right to left */
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(0); /* End at the center */
+  }
+}
+
+
+
+
+/* Media queries for responsiveness */
+
+#REVIEW{
+  padding: 20px;
+} 
+.reviewcontainer {
+  color: #f0f0f0;
+  /* background-color: #f8f8f5; */
+  background-image: url(11.png);/* Light background for visibility */
+  padding: 40px;
+  border-radius: 15px; /* Round the corners of the overall review div */
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Headings */
+.container-4 h1 {
+  /* text-decoration: underline; */
+  font-size: 2.5;
+  margin-bottom: 10px;
+}
+
+.container-4 h3 {
+  font-size: 1.5rem;
+  color: #d4d4d0;
+  margin-bottom: 30px;
+}
+
+/* Flexbox for the review images */
+.container-5 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow the reviews to wrap on smaller screens */
+}
+
+/* Add curved borders to the images */
+.re img {
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  opacity: 0; /* Initially hidden */
+  transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
+}
+
+/* Animation for different directions */
+.re-1 img {
+  transform: translateX(-200px); /* Come from the left */
+}
+
+.re-2 img {
+  transform: translateX(200px); /* Come from the right */
+}
+
+.re-3 img {
+  transform: translateY(-200px); /* Come from the top */
+}
+
+.re-4 img {
+  transform: translateY(200px); /* Come from the bottom */
+}
+
+.re-5 img {
+  transform: scale(0.5); /* Zoom in effect */
+}
+
+/* Animation when in view */
+.re.show img {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1); /* Reset to normal */
+}/* Media query for responsiveness */
+#CONTACTUS {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Container for the CONTACT US section */
+/* Contact Us Section */
+#CONTACTUS {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.container-6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-6 h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    margin-right: 130px;
+}
+
+.contact-description {
+    font-size: 32px;
+    color: #555;
+    line-height: 1.4;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.call-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.call-button1 {
+    height: 300px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.call-button1:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgba(228, 100, 8, 0.6));
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Form Styling */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.reqsub {
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: rgb(228, 100, 8);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reqsub:hover {
+    background-color: rgb(200, 80, 0);
+}
+
+/* Image Container Styling */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 300px;
+    height: auto;
+}
+
+.contact-image {
+    height: 500px;
+    width: auto;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .container-6 {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .content-6 h1 {
+      font-size: 2rem;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .contact-description {
+      font-size: 1.2rem;
+      max-width: 100%;
+      margin: 10px 0 30px;
+  }
+
+  .call-button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+
+  .call-button1 {
+      height: 200px;
+  }
+
+  .image-container {
+      width: 100%;
+      justify-content: center;
+  }
+
+  .contact-image {
+      height: 300px;
+  }
+
+  .modal-content {
+      width: 90%;
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-6 h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+  }
+
+  .contact-description {
+      font-size: 1rem;
+      padding: 0 15px;
+  }
+
+  .call-button-container {
+      display: flex;
+      justify-content: center;
+  }
+
+  .call-button1 {
+      height: 150px;
+  }
+
+  .modal-content {
+      padding: 15px;
+  }
+}
+
+
+
+
+footer {
+  /* Apply the background image */
+  background-image: url('/img/footer bg.png');
+  background-size: cover;       /* Ensures the image covers the entire footer */
+  background-position: center;  /* Centers the image */
+  position: relative;           /* Necessary for the overlay */
+  color: #ffffff; 
+  padding: 20px 0; 
+  text-align: center; 
+  margin-bottom: 10px;
+  overflow: hidden;             /* Prevents scrolling if the blur overflows */
+}
+
+
+.map-container {
+  width: 100%; /* Full width */
+  height: 400px; /* Fixed height */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures no overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+  margin: 20px 0; /* Margin around the map container */
+}
+.mobile-footer{
+  display: none ;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);  /* Applies the blur */
+  background: rgba(255, 255, 255, 0.1); /* Light overlay to blend the blur */
+  z-index: 0;                   /* Places blur effect behind content */
+}
+
+footer * {
+  position: relative;
+  z-index: 1;                   /* Brings the text content above the blur */
+}
+
+
+/* nav bar  mbile */
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  
+
+  }
+  
+  .text h1{
+    font-size: 1.9rem;
+  }
+  .text h2{
+    font-size: 2rem;
+  }
+  
+
+@media(max-width: 400px){
+  .sidebar{
+    width: 80%;
+  }
+  
+   
+   
+   
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      height: 70px; /* Optionally adjust the height for mobile */
+      position: fixed; /* Fixed position */
+      top: 0; /* Stick to the top */
+      width: 400px; /* Full width minus margins */
+      z-index: 10; /* Ensure it's above other elements */
+    }
+  
+    nav a {
+      padding: 0 15px; /* Adjust padding for smaller screens */
+      font-size: 1rem;  /* Adjust font size for better fit */
+    }
+  }
+
+/* THE NEW MEDIA */
+@media only screen and (max-width: 480px) {
+  
+}
+/* till this nav */
+
+/*  sliding imag enot visble */
+@media only screen and (max-width: 768px) {
+  .headings {
+      margin-top: 100px;
+  }
+
+  .formcontainer {
+    
+      padding: 20px;
+      margin-left: 10px;
+  }
+
+  
+/* Responsive styling for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+  .container-1 .c {
+    width: 90%; /* Set width to 90% for mobile devices */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 15px; /* Adjust padding for better appearance */
+    font-size: 1.2rem; /* Slightly smaller font size for readability */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media only screen and (max-width: 480px) {
+  .container-1 .c {
+    padding: 10px; /* Reduce padding for very small screens */
+    font-size: 1rem; /* Further reduce font size */
+    width: 95%; /* Use a wider width for very small screens */
+height: 180px;  }
+}
+
+  /* major problem */
+  /* .headingswords,.open-button{
+    display: none;
+  }
+   */
+}/* Responsive styling for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+  .container-1 {
+    display: flex; /* Add flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 2rem; /* Reduced for better readability */
+    text-align: center; /* Center text */
+    margin-left: 0; /* Reset left margin for better centering */
+    margin-right: 0; /* Reset right margin for better centering */
+  }
+
+  .container-1 div {
+    padding: 10px;
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Limit the width for better readability */
+    box-sizing: border-box; /* Include padding in width */
+    text-align: center; /* Center text within each div */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media only screen and (max-width: 480px) {
+  .container-1 {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1.5rem; /* Slightly smaller for very small screens */
+    justify-content: center;
+  }
+
+  .container-1 div {
+    padding: 5px; /* Adjust padding for smaller screens */
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Limit the width for better readability */
+  }
+
+  h3 {
+    padding-top: 20px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  h5 {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .call {
+    padding:15px 60px; /* Reduce padding */
+    font-size: 1.5rem; /* Adjust font size */
+    margin-top: 30px; /* Adjust spacing */
+    width: 80%; /* Make button take up more width */
+    max-width: 100%; /* Prevent overflow on small screens */
+    font-weight: bold;
+  }
+  .WhatsApp {
+    padding: 15px 60px; /* Reduce padding */
+    font-size: 1.5rem; /* Adjust font size */
+    margin-top: 3px; /* Adjust spacing */
+    width: 80%; /* Make button take up more width */
+    max-width: 100%; /* Prevent overflow on small screens */
+    font-weight: bold;
+
+  }
+ 
+}
+
+/* ending of  container 0 */
+/* container of 1 of about us */
+@media only screen and (max-width: 768px) {
+ 
+  .container-2 {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .content-2 {
+      padding-right: 0;
+      text-align: center;
+  }
+
+  .content-2 h1 {
+      margin-left: 0;
+      font-size: 2.5rem;
+  }
+
+  .content-2 p {
+      margin-left: 0;
+      width: 100%;
+      font-size: 1.2rem;
+  }
+
+  .image-2 img {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+  }
+  
+}
+
+/* Extra small screens */
+@media only screen and (max-width: 480px) {
+  .content-2 h1 {
+      font-size: 2rem;
+  }
+
+  .content-2 p {
+      font-size: 1rem;
+  }
+
+  
+
+}
+/*  ending container of 1 of about us */
+/*  starting container of 2 of our service */
+
+
+@media only screen and (max-width: 768px) {
+  .container-3 {
+      flex-direction: column;
+      padding: 40px;
+      /* border: 10px; */
+
+  }
+
+  .content-3 {
+      padding-right: 0;
+      text-align: center;
+  }
+
+  .content-3 h1 {
+      margin-left: 0;
+      font-size: 2.5rem;
+  }
+
+  .content-3 p {
+      margin-left: 0;
+      width: 100%;
+      font-size: 1.2rem;
+  }
+
+  .image-3 img {
+      width: 100%;
+      height: 100%;
+      margin-top: 20px;
+  }
+}
+
+/* Extra small screens */
+@media only screen and (max-width: 480px) {
+  .content-3 h1 {
+      font-size: 2rem;
+  }
+
+  .content-3 p {
+      font-size: 1rem;
+  }
+
+
+}
+  
+  /*  ending container of 2 of our service */
+/* starting od container 5 review */
+  @media (max-width: 768px) {
+    .container-5 {
+      justify-content: center; /* Center the images on smaller screens */
+      gap: 20px; /* More space between images */
+    }
+  
+    .re img {
+      width: 150px;
+      height: 150px; /* Reduce size of images */
+    }
+    
+  }
+
+  @media (max-width: 480px) {
+    .container-4 h1 {
+      font-size: 2rem; /* Reduce heading size */
+    }
+
+    /* welcome */
+    #welcomePopup {
+      position: fixed; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      width: 220px; 
+      height: 120px; 
+      /* Optional: shadow for visibility */
+    }
+   
+
+    .container-4 h3 {
+      font-size: 1.2rem;
+    }
+  
+    .re img {
+      width: 120px;
+      height: 120px; /* Further reduce image size on very small screens */
+    }
+  #REVIEW {
+    padding: 20px;
+  }
+ 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container-6 {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .content-6 h1 {
+    font-size: 2rem; /* Smaller font size for titles */
+    margin-right: 0; /* Remove right margin */
+    text-align: center; /* Center align the title */
+  }
+
+  .content-6 h3 {
+    font-size: 24px; /* Smaller font size for descriptions */
+  }
+
+  .call-button1 {margin-right: 40px;
+    justify-content: center;
+    /* align-items: center; */
+    height: 200px; /* Reduce size for the button */
+    width: 200px; /* Reduce size for the button */
+  }
+
+  .image-container {
+    align-items: center; /* Center align images on mobile */
+    width: 100%; /* Full width on mobile */
+  }
+
+  .contact-image {display: none;
+    height: 300px; /* Reduced height for images on mobile */
+    width: 300px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .orange-separator {
+    width: 80%; /* Increase width on smaller screens */
+    margin-left: auto;
+    margin-right: auto; /* Center align */
+  }
+  #chatbot{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .orange-separator {
+    width: 90%;
+  }
+  #chatbot{
+    display: none;
+  }
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 20PX;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+}
+
+/* Headings styling */
+.headingswords {
+  margin-left: 350px;
+  margin-top: 350px;
+  position: relative;
+  right: 300px;
+  bottom: 150px;
+}
+
+.headingswords h2 {
+  color: rgb(228, 100, 8);
+  font-size: 2.5rem;
+}
+
+.headingswords h1 {
+  color: white;
+  font-size: 3.5rem;
+  padding-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .headingswords {
+    margin: 10px;
+    margin-top: 30px;
+    position: static;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .headingswords h2 {
+    font-size: 2rem;
+    font-weight: 750;
+  }
+
+  .headingswords h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1PX;
+
+  }
+}
+
+/* Slider styling */
+.slider {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  right: 100px;
+  margin: 20px 50px 10px 1px;
+  align-items: center;
+}
+
+.slides img {
+  height: 400px;
+  width: 500px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, 
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments for the slider */
+@media (max-width: 768px) {
+  .slider {
+    width: 70%;
+    height: auto;
+    left: 20px;
+    /* align-items: center; */
+  }
+
+  .slides img, .slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    padding: 5px;
+  }
+  #home {
+    background: url(11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100px; /* Adds space for wave */
+    overflow: hidden; /* Keeps SVG contained within the section */
+  }
+  
+  /* Adding the wavy curve at the bottom */
+  #home::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width:120%;
+    height: 100px; /* Adjust height to control wave size */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,112C960,85,1056,75,1152,106.7C1248,139,1344,213,1392,245.3L1440,277L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+}
+.modal-content {
+  padding: 20px; /* Reduce padding */
+  width: 90%; /* Use 90% width on smaller screens */
+  margin: 50% auto; /* Reduce margin for centering */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .call-button-container {
+    margin: 15px 0px 1px 30px; /* Smaller margin for tablets */
+  }
+
+  .call-button {
+    height: 80px;
+    width: 80px; /* Smaller button for tablets */
+  }
+}
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container-4 h1 {
+    font-size: 2rem; /* Reduce main heading size */
+    text-align: center; /* Center align the heading */
+    font-weight: bold; /* Make heading bold */
+  }
+
+  .container-4 h3 {
+    font-size: 1.2rem; /* Reduce subheading size */
+    text-align: center; /* Center align the subheading */
+  }
+
+  .container-5 {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Display images in 2-2-1 layout */
+  .container-5 .re {
+    flex-basis: 48%; /* Each image takes about half width */
+  }
+
+  .container-5 .re:nth-child(5) {
+    flex-basis: 100%; /* Last image takes full width */
+  }
+
+  .re img {height: 120PX;
+    max-width: 180px; /* Increased size for larger images on mobile */
+    margin-bottom: 15px; /* Space between stacked images */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-4 h1 {
+    font-size: 1.8rem;
+    text-align: center; /* Center align the heading */
+    font-weight: bold; /* Make heading bold */
+  }
+
+  .container-4 h3 {
+    font-size: 1rem;
+    text-align: center; /* Center align the subheading */
+  }
+
+  .reviewcontainer {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  /* Display images in 2-2-1 layout */
+  .container-5 .re {
+    flex-basis: 48%; /* 2-2 layout for very small screens */
+  }
+
+  .container-5 .re:nth-child(5) {
+    flex-basis: 100%; /* Last image full width */
+  }
+
+  .re img {
+    max-width: 150px; /* Larger size for images on very small screens */
+  }
+}
+
+/* ========== for mobile footer */
+/* Hide on larger screens and only display on mobile */
+@media only screen and (max-width: 768px) {
+  /* Show only on mobile screens */
+  .mobile-footer { 
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 96%; /* Fits full width of mobile screen */
+      max-width: 420px; /* iPhone 14 screen width */
+      margin-bottom: 2px;
+      background-color: whitesmoke; /* White background for clarity */
+      /* box-shadow: 0 -2px 10px rgb(206, 96, 6); REVIEWShadow for depth */
+      padding: 10px;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1000; /* Stay on top of other elements */
+      /* margin: 0 auto; Center the footer on the screen */
+      margin-left: 0px;
+  }
+
+  .footer-button {
+      flex: 1;
+      text-align: center;
+      padding: 8px; /* Reduced padding for compactness */
+      color: rgb(0, 0, 0);
+      background-color: #ffffff;
+      font-size: 0.9rem; /* Slightly smaller font */
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0 3px; /* Reduced margin for compact layout */
+      box-shadow: 0 -2px 10px rgb(206, 96, 6); 
+
+  }
+
+  .footer-button img {
+    animation: popEffect 1.2s ease-in-out infinite; /* Infinite loop for continuous effect */
+}
+
+/* Pop-in effect for icons */
+@keyframes popEffect {
+    0%, 100% {
+        transform: scale(1); /* Normal size at start and end */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger at midpoint */
+        opacity: 0.9; /* Slight opacity change for emphasis */
+    }
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 20px 10px; /* Padding adjustments for smaller screens */
+  }
+
+  footer h1, footer h2, footer p {
+    font-size: 1.5rem; /* Adjust font size for headings */
+    margin: 10px 0; /* Add margin to space out elements */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media only screen and (max-width: 480px) {
+  footer h1, footer h2, footer p {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+}
+  .footer {
+      padding-bottom: 100px;
+  }
+}
+
+
+
